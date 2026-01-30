@@ -1,6 +1,207 @@
-{% extends "layout/main.html" %}
+{% extends "layout/main.html" %} {% load static %} {% block content %}
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">Invision Hospital</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#doctors">Doctors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-{% block content %}
-<h1>Hello</h1>
-<h2>Akash</h2>
+<!-- HERO SECTION -->
+<section id="home" class="hero-section bg-primary text-white py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <h1 class="display-5 fw-bold">Welcome to Invision Hospital</h1>
+        <p class="lead">
+          Providing the best healthcare services with modern facilities and
+          expert doctors.
+        </p>
+        <a href="{% url 'appointment' %}" class="btn btn-light btn-lg mt-3"
+          >Book Appointment</a
+        >
+      </div>
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img
+          src="{% static 'images/banner.jpg' %}"
+          class="img-fluid rounded shadow"
+          alt="Hospital Banner"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Services</h2>
+      <p class="text-muted">
+        We offer a wide range of healthcare services to meet your needs
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-heart-pulse-fill display-4 text-primary mb-3"></i>
+            <h5 class="card-title">Cardiology</h5>
+            <p class="card-text">
+              Advanced heart care with expert cardiologists and modern
+              equipment.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-bandaid-fill display-4 text-primary mb-3"></i>
+            <h5 class="card-title">Emergency Care</h5>
+            <p class="card-text">
+              24/7 emergency services with rapid response and professional
+              staff.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-hospital-fill display-4 text-primary mb-3"></i>
+            <h5 class="card-title">General Surgery</h5>
+            <p class="card-text">
+              Expert surgeons providing safe and modern surgical solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img
+          src="https://images.unsplash.com/photo-1588776814546-d6fc60a2a1d7?fit=crop&w=600&q=80"
+          class="img-fluid rounded shadow"
+          alt="About Hospital"
+        />
+      </div>
+      <div class="col-md-6 mt-4 mt-md-0">
+        <h2 class="fw-bold">About Invision Hospital</h2>
+        <p>
+          At Invision Hospital, we prioritize patient care and modern healthcare
+          facilities. Our team of experienced doctors, nurses, and medical staff
+          ensure that you receive the best care possible. We combine compassion
+          with advanced medical technology.
+        </p>
+        <a href="#contact" class="btn btn-primary mt-3">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS SECTION -->
+<section id="doctors" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Meet Our Doctors</h2>
+      <p class="text-muted">
+        Our team of expert doctors are here to care for you
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?fit=crop&w=400&q=80"
+            class="card-img-top"
+            alt="Doctor"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Smith</h5>
+            <p class="card-text text-muted">Cardiologist</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?fit=crop&w=400&q=80"
+            class="card-img-top"
+            alt="Doctor"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Dr. Sarah Lee</h5>
+            <p class="card-text text-muted">Surgeon</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?fit=crop&w=400&q=80"
+            class="card-img-top"
+            alt="Doctor"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Dr. Mike Johnson</h5>
+            <p class="card-text text-muted">Neurologist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA SECTION -->
+<section id="contact" class="py-5 bg-primary text-white">
+  <div class="container text-center">
+    <h2 class="fw-bold">Book Your Appointment Today</h2>
+    <p class="mb-4">
+      Call us or fill out our online appointment form to get started.
+    </p>
+    <a href="tel:+1234567890" class="btn btn-light btn-lg me-2">Call Now</a>
+    <a href="#" class="btn btn-outline-light btn-lg">Book Online</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 bg-dark text-white text-center">
+  <div class="container">
+    &copy; 2026 Invision Hospital. All rights reserved.
+  </div>
+</footer>
 {% endblock %}
